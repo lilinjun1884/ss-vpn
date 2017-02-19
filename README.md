@@ -1,2 +1,2 @@
 # ss-vpn
-vpn with shadowsocks
+vpn with shadowsocks and serverspeeder

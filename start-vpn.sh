@@ -6,7 +6,9 @@ apt-get install linux-image-extra-3.13.0-24-generic
 dpkg -l|grep linux-image 
 #卸载列出的其他内核
 apt-get purge linux-image-3.13.0-104-generic linux-image-extra-3.13.0-104-generic 
+#更新 grub 系统引导文件并重启
 update-grub
+reboot
 
 #安装shadowsocks
 yum install python-setuptools && easy_install pip

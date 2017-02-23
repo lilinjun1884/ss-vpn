@@ -4,7 +4,7 @@
 apt-get update
 apt-get install python-pip
 pip install shadowsocks
-# 启动shadowsocks(可以添加到/etc/rc.local) 
+# 启动shadowsocks(可以添加到/etc/rc.local) (加密算法可以安装并使用chacha20，速度更快)
 ssserver -p 1984 -k yourpassword -m rc4-md5 -d start
 
 #选择一 使用锐速

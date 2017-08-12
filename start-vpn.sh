@@ -1,11 +1,21 @@
+#!/bin/bash
 #操作于：Ubuntu 14.04 x64
+
+#开启chacha20加密方式
+apt-get install build-essential
+wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz
+tar zxf LATEST.tar.gz
+cd libsodium*
+./configure
+make && make install
+ldconfig
 
 #安装shadowsocks
 apt-get update
 apt-get install python-pip
 pip install shadowsocks
 # 启动shadowsocks(可以添加到/etc/rc.local) (加密算法可以安装并使用chacha20，速度更快)
-ssserver -p 1984 -k yourpassword -m rc4-md5 -d start
+ssserver -p 1984 -k yourpassword -m chacha20 -d start
 
 #选择一 使用锐速
 #内核换成24

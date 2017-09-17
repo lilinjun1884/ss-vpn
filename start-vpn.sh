@@ -1,5 +1,6 @@
 #!/bin/bash
 #操作于：Ubuntu 14.04 x64
+#vps购买：https://www.vultr.com/?ref=6966469
 
 #开启chacha20加密方式
 apt-get install build-essential

@@ -17,6 +17,20 @@ apt-get install python-pip
 pip install shadowsocks
 # 启动shadowsocks(可以添加到/etc/rc.local) (加密算法可以安装并使用chacha20，速度更快)
 ssserver -p 1984 -k yourpassword -m chacha20 -d start
+# 或者使用配置文件的方式：
+vi  /etc/shadowsocks.json
+{
+    "server":"vps-server-ip",
+    "server_port":9000,
+    "password":"xxx",
+    "method":"rc4-md5",
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "timeout":300
+}
+ssserver -c /etc/shadowsocks.json -d start
+
+
 
 #选择一 使用锐速
 #内核换成24

@@ -61,3 +61,8 @@ sysctl net.ipv4.tcp_available_congestion_control
 #查看BBR是否开启
 lsmod | grep bbr
 
+
+
+## 其他：v2ray 安装脚本：
+sudo -i 
+bash <(curl -s -L https://git.io/v2ray.sh)
